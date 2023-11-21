@@ -1,6 +1,6 @@
 <h1 align="center" id="title">WeatherApp-Node</h1>
 
-<p align="center"><img src="https://socialify.git.ci/OktayRasimov/weather-app-node/image?language=1&amp;owner=1&amp;name=1&amp;stargazers=1&amp;theme=Light" alt="project-image"></p>
+<h2>Project Description</h2>
 
 <p id="description">A Very Simple Weather app made with VanillaJS/Node</p>
 
@@ -20,6 +20,14 @@ Back End:
 
 - Node.Js
 - Express
+
+<h2>🧐 Features</h2>
+
+Here're some of the project's best features:
+
+- Google Places Api
+
+- Google Maps Api
 
 <h2>🛠️ Installation Steps:</h2>
 
