@@ -9,7 +9,9 @@ const app = express();
 app.use(express.static("../client"));
 app.use(express.json());
 
-app.post("/weather", (req, res) => {});
+app.post("/weather", (req, res) => {
+  console.log(req.body);
+});
 
 app.listen(3000, () => {
   console.log(`STARTIRA ALOOOOOOOO`);

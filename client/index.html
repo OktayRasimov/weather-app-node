@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs3xeJBMUOwvlqkfL1J1DxwJYeUMoDkdw&libraries=places"
+    ></script>
     <script defer src="script.js"></script>
     <title>Weather app</title>
   </head>
@@ -11,7 +15,12 @@
     <div class="weather-container">
       <header>MAIN TITLE</header>
       <h2>Input City Location</h2>
-      <input />
+      <input
+        type="text"
+        class="city-search"
+        data-city-search
+        placeholder="Enter Location..."
+      />
     </div>
   </body>
 </html>
