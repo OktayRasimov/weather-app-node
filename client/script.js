@@ -1,7 +1,12 @@
 const searchElement = document.querySelector("[data-city-search]");
-const searchBox = new google.maps.places.SearchBox(searchElement);
 
-let mainTemp = document.querySelector("[data-main-temp]");
+let cityName = document.querySelector("[data-city-name]");
+let windSpeed = document.querySelector("[data-wind-speed]");
+let tempMain = document.querySelector("[data-temp]");
+let humidityPerc = document.querySelector("[data-humidity]");
+let deleteQuery = document.querySelector("[data-delete-search]");
+
+const searchBox = new google.maps.places.SearchBox(searchElement);
 
 searchBox.addListener("places_changed", () => {
   const place = searchBox.getPlaces()[0];
@@ -34,7 +39,17 @@ function kelvinToCelsiusConverter(temp) {
 function setWeatherData(data) {
   console.log(data);
   const place = data.name;
-  mainTemp.textContent = place;
+  cityName.textContent = place;
+  windSpeed.textContent = `${data.wind.speed} km/h`;
+  tempMain.textContent = `${kelvinToCelsiusConverter(data.main.temp).toFixed(
+    2
+  )} °C`;
+  console.log(kelvinToCelsiusConverter(data.main.temp));
+  humidityPerc.textContent = `${data.main.humidity} %`;
 }
+
+deleteQuery.addEventListener("click", () => {
+  searchElement.value = "";
+});
 
 // https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}

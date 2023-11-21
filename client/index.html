@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
     <script
       defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs3xeJBMUOwvlqkfL1J1DxwJYeUMoDkdw&libraries=places"
@@ -13,14 +19,37 @@
   </head>
   <body>
     <div class="weather-container">
-      <header>MAIN TITLE</header>
-      <h2 data-main-temp>Main temp</h2>
-      <input
-        type="text"
-        class="city-search"
-        data-city-search
-        placeholder="Enter Location..."
-      />
+      <main class="container-main__content">
+        <header>
+          <h2>Overcast</h2>
+          <h1 class="city-name" data-city-name>
+            Enter a location<br />To Find The Weather
+          </h1>
+        </header>
+        <ul class="container-ul">
+          <li>
+            <header class="test">Wind</header>
+            <p data-wind-speed>NaN</p>
+          </li>
+          <li>
+            <header class="test">Temperature</header>
+            <p data-temp>NaN</p>
+          </li>
+          <li>
+            <header class="test">Precipitation</header>
+            <p data-humidity>NaN</p>
+          </li>
+        </ul>
+        <aside class="search-container">
+          <input
+            type="text"
+            class="city-search"
+            data-city-search
+            placeholder="Enter Location..."
+          />
+          <p data-delete-search class="delete-query">&olarr;</p>
+        </aside>
+      </main>
     </div>
   </body>
 </html>
